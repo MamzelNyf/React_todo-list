@@ -2,10 +2,28 @@ import React from 'react';
 import TodoItem from './components/TodoItem'
 import ContactCard from './components/ContactCard';
 import Joke from './components/Joke';
+import jokesData from './jokesData'
 
 
 
 function App() {
+  // jokesData.map(joke => {
+  //   return( <Joke question={joke.question} punchLine={joke.punchLine}
+  //   ) 
+  // })
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findindex
+
+  // Array of components, loop through jokeData to display each key values in a component 
+  // Error = Each child in a list should have a unique "key" prop: add a key with a unique value in the component
+  const jokeComponents = jokesData.map(joke => <Joke key={joke.id} question={joke.question} punchLine={joke.punchLine} />)
   return (
       <div>
         <div className="todo-list">
@@ -34,27 +52,12 @@ function App() {
         </div>
         <div className="joke">
           <h3>Jokes</h3>
-          <Joke punchLine="It’s hard to explain puns to kleptomaniacs because they always take things literally."/>
+          <Joke punchLine="It’s hard to explain."/>
           <Joke 
-                question="What's the best thing about Switzerland?" 
-                punchLine="I don't know, but the flag is a big plus!"
+                question="Knock Knock?" 
+                punchLine="Who's there?"
             />
-            
-            <Joke 
-                question="Did you hear about the mathematician who's afraid of negative numbers?" 
-                punchLine="He'll stop at nothing to avoid them!"
-            />
-            
-            <Joke 
-                question="Hear about the new restaurant called Karma?" 
-                punchLine="There’s no menu: You get what you deserve."
-            />
-            
-            <Joke 
-                question="Did you hear about the actor who fell through the floorboards?" 
-                punchLine="He was just going through a stage."
-            />
-
+          {jokeComponents}
 
         </div>
       </div>
