@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+
 }
 
 code {
@@ -58,4 +60,7 @@ input[type=checkbox] {
 
 input[type=checkbox]:focus {
   outline: 0;
+}
+.products div:nth-child(even){
+  background-color: yellow;
 }
