@@ -47,7 +47,6 @@ class Todo extends React.Component {
   }
   render(){
     const todoItems = this.state.todos.map(item => <TodoItem key={item.id} todoItem={item} handleChange={this.handleChange}/>)
-    
     return (
       <div>
         <div className="todo-list">

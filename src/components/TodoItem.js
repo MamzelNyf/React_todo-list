@@ -2,6 +2,11 @@
 import React from 'react';
 
 function TodoItem(props){
+    const completedStyle =  {
+        textDecoration: "line-through",
+        color: "#cdcdcd",
+        fontStyle: "italic"
+    }
     return(
         <div className="todo-item">
             <input 
@@ -9,7 +14,7 @@ function TodoItem(props){
                 checked={props.todoItem.completed} 
                 onChange={() => props.handleChange(props.todoItem.id)}
             />
-            <p>{props.todoItem.text}</p>
+            <p style={props.todoItem.completed ? completedStyle : null}>{props.todoItem.text}</p>
         </div>
     )
 }

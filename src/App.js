@@ -5,6 +5,8 @@ import Todo from './components/Todo'
 // import Loading from './components/LoadingConditional'
 // import Login from './components/Login'
 // import Message from './components/Messages'
+import FetchApi from './components/FetchApi'
+
 
 
 
@@ -16,6 +18,7 @@ function App () {
         {/* <Loading /> */}  
         {/* <Login /> */}
         {/* <Message /> */}
+        <FetchApi />
       </div>
     )
   }
