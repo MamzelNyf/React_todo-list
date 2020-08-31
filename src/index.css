@@ -5,7 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
 
 }
 
@@ -18,7 +17,8 @@ body {
   background-color: whitesmoke;
 }
 
-.todo-list {
+.todo-list {  
+  text-align: center;
   background-color: white;
   margin: auto;
   width: 50%;
@@ -63,4 +63,8 @@ input[type=checkbox]:focus {
 }
 .products div:nth-child(even){
   background-color: yellow;
+}
+.form{
+  width: 50%;
+  margin: auto;
 }

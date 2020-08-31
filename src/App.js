@@ -5,7 +5,9 @@ import Todo from './components/Todo'
 // import Loading from './components/LoadingConditional'
 // import Login from './components/Login'
 // import Message from './components/Messages'
-import FetchApi from './components/FetchApi'
+// import FetchApi from './components/FetchApi'
+import Form from './components/Forms'
+
 
 
 
@@ -13,12 +15,13 @@ import FetchApi from './components/FetchApi'
 function App () {
     return (
       <div>
-        <Todo />
+        {/* <Todo /> */}
         {/* <SetState /> */}  
         {/* <Loading /> */}  
         {/* <Login /> */}
         {/* <Message /> */}
-        <FetchApi />
+        {/* <FetchApi /> */}
+        <Form />
       </div>
     )
   }
